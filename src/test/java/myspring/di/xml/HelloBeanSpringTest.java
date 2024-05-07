@@ -28,6 +28,11 @@ public class HelloBeanSpringTest {
 		System.out.println(hello2.sayHello());
 		System.out.println(hello3.sayHello());
 		hello3.print();
+		
+		//Iterable 인터페이스에  forEach(Consumer)
+		//Consumer 함수형인터페이스  void accept(T t)
+		hello3.getNames()  //List<String>
+			  .forEach(name -> System.out.println(name));
 	}
 	
 }

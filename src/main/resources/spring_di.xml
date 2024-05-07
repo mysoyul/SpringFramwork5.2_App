@@ -22,6 +22,14 @@
 	<bean id="helloCons" class="myspring.di.xml.Hello">
 		<constructor-arg name="name" value="생성자Injection" />
 		<constructor-arg name="printer" ref="conPrinter" />
+		<!-- setNames(List<String>) -->
+		<property name="names">
+			<list>
+				<value>DI</value>
+				<value>AOP</value>
+				<value>MVC</value>
+			</list>
+		</property>
 	</bean>
 	
 	<!-- Component Scanning -->
