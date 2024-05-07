@@ -27,6 +27,7 @@ public class HelloBeanSpringTest {
 		System.out.println(hello.sayHello());
 		System.out.println(hello2.sayHello());
 		System.out.println(hello3.sayHello());
+		hello3.print();
 	}
 	
 }

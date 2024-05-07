@@ -23,4 +23,5 @@
 		<constructor-arg name="name" value="생성자Injection" />
 		<constructor-arg name="printer" ref="conPrinter" />
 	</bean>
+	
 </beans>
