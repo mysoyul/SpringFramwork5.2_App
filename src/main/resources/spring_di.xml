@@ -24,4 +24,7 @@
 		<constructor-arg name="printer" ref="conPrinter" />
 	</bean>
 	
+	<!-- Component Scanning -->
+	<context:component-scan base-package="myspring.di.annot" />
+	
 </beans>

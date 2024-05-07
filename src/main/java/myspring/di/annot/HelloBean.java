@@ -13,7 +13,7 @@ public class HelloBean {
 	String name;
 	
 	@Autowired
-	@Qualifier("")
+	@Qualifier("stringPrinter")
 	PrinterBean printer;
 	
 	List<String> names;
