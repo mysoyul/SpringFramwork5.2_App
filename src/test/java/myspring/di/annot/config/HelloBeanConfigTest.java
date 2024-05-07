@@ -1,5 +1,7 @@
 package myspring.di.annot.config;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +19,13 @@ public class HelloBeanConfigTest {
 	@Autowired
 	HelloBean hello;
 	
+	@Autowired
+	List<String> nameList;
+	
 	@Test
 	void hello() {
 		System.out.println(hello.sayHello());
+		nameList.forEach(System.out::println);
 	}
 	
 }
