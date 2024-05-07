@@ -33,7 +33,7 @@ public class Hello {
 	}
 
 	public void setPrinter(Printer printer) {
-		System.out.println("setPrinter called  " + printer);
+		System.out.println("setPrinter called  " + printer.getClass().getName());
 		this.printer = printer;
 	}
 
