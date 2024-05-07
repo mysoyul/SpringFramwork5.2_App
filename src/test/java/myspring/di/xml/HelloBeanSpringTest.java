@@ -31,8 +31,13 @@ public class HelloBeanSpringTest {
 		
 		//Iterable 인터페이스에  forEach(Consumer)
 		//Consumer 함수형인터페이스  void accept(T t)
+		
+		//Consumer 인터페이스를 람다식으로 표현
 		hello3.getNames()  //List<String>
 			  .forEach(name -> System.out.println(name));
+		//Consumer 인터페이스를 Method Reference 로 표현
+		hello2.getNames()
+			  .forEach(System.out::println);
 	}
 	
 }
