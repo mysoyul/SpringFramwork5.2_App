@@ -21,6 +21,7 @@ public class HelloConfig {
 	public Hello hello() {
 		Hello hello = new Hello();
 		hello.setName(env.getProperty("myName3"));
+		hello.setPrinter(stringPrinter());
 		return hello;
 	}
 	
