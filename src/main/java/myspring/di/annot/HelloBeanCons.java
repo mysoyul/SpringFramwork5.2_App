@@ -17,7 +17,7 @@ public class HelloBeanCons {
 	
 	@Autowired
 	public HelloBeanCons(
-			@Value("전략2생성자Injection") String name, 
+			@Value("${myName2}") String name, 
 			@Qualifier("consolePrinter") PrinterBean printer) {
 		System.out.println(this.getClass().getName() + " Overloaded Constructor Called..");
 		this.name = name;
