@@ -9,8 +9,6 @@ public class UserVO {
 	private String city;
 
 	public UserVO() {}
-	
-
 
 
 	public UserVO(String userId, String name, String gender, String city) {

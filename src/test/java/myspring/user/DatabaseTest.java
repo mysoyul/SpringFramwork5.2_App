@@ -7,12 +7,14 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSession;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import myspring.user.dao.mapper.UserMapper;
 import myspring.user.vo.UserVO;
 
 @ExtendWith(SpringExtension.class)
@@ -23,8 +25,20 @@ public class DatabaseTest {
 	
 	@Autowired
 	SqlSession sqlSession;
+
+	@Autowired
+	UserMapper userMapper;
 	
 	@Test
+	void userMapper() {
+		UserVO user = userMapper.selectUserById("gildong");
+		System.out.println(user);
+		user.setCity("경기");
+		
+		userMapper.updateUser(user);
+	}
+	
+	@Test @Disabled
 	void mybatis() {
 		UserVO user = sqlSession.selectOne("userNS.selectUserById", "dooly");
 		System.out.println(user);
