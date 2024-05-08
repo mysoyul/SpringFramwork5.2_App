@@ -30,11 +30,17 @@ public class AnnotatedHelloBeanTest {
 	}
 	
 	
-	@Test @Disabled
+	@Test //@Disabled
 	void hello() {
 		assertEquals("Hello 어노테이션", hello.sayHello());
 		hello.print();
-		assertEquals("Hello 어노테이션", printer.toString());				
+		assertEquals("Hello 어노테이션", printer.toString());
+		
+		for(String name: hello.getNames()) {
+			System.out.println(name);
+		}
+		
+		//System.out.println();
 	}
 	
 }
