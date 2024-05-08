@@ -28,7 +28,7 @@
 			</list>
 		</property>
 	</bean>
-	<!-- SqlSessionTemplate 설정 -->
+	<!-- SqlSessionTemplate 은 생성자주입 방법을 통해서 SqlSessionFactory를 초기화해야 한다. -->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>

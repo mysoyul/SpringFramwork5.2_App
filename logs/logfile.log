@@ -1,0 +1,8 @@
+2024-05-08 10:53:21 661 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2024-05-08 10:53:22 423 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2024-05-08 10:53:22 439 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e54db99] was not registered for synchronization because synchronization is not active
+2024-05-08 10:53:22 492 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@475394679 wrapping org.mariadb.jdbc.MariaDbConnection@5ddabb18] will not be managed by Spring
+2024-05-08 10:53:22 518 [main] DEBUG userNS.selectUserById - ==>  Preparing: select * from users where userid=?
+2024-05-08 10:53:22 584 [main] DEBUG userNS.selectUserById - ==> Parameters: dooly(String)
+2024-05-08 10:53:22 625 [main] DEBUG userNS.selectUserById - <==      Total: 1
+2024-05-08 10:53:22 627 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e54db99]
