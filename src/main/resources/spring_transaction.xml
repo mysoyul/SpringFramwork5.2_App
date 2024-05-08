@@ -19,14 +19,14 @@
 		<tx:attributes>
 			<tx:method name="get*" read-only="true"/>
 			
-			<!--No existing transaction found for transaction marked with propagation 'mandatory'-->
-<!-- 			<tx:method name="deleteUser" propagation="NOT_SUPPORTED"/> -->
-<!-- 			<tx:method name="delete" propagation="MANDATORY"/> -->
-			
 			<!-- 예외=Existing transaction found for transaction marked with propagation 'never' -->
+<!-- 			<tx:method name="deleteUser" propagation="REQUIRED"/> -->
+<!-- 			<tx:method name="delete" propagation="NEVER"/> -->
+
+			<!--No existing transaction found for transaction marked with propagation 'mandatory'-->			
 			<tx:method name="updateUser" propagation="NOT_SUPPORTED"/>
 <!-- 			<tx:method name="update" propagation="REQUIRED" /> -->
-		<tx:method name="update" propagation="MANDATORY" />
+			<tx:method name="update" propagation="MANDATORY" />
 		</tx:attributes>
 	</tx:advice>
 	
