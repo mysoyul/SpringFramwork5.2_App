@@ -24,7 +24,7 @@ public class RestfulUserController {
 
 	//Constructor Injection
 	public RestfulUserController(UserService userService) {
-		System.out.println(this.getClass().getName() + " 생성자 호출됨!");
+		System.out.println(">>>> " + this.getClass().getName() + " 생성자 호출됨!");
 		this.userService = userService;
 	}
 
