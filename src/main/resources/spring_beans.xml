@@ -3,8 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<!-- Component Auto Scanning 설정 -->
 	<context:component-scan base-package="myspring.**.dao,myspring.**.service" />
@@ -41,5 +43,18 @@
 		<property name="basePackage" value="myspring.**.dao.mapper"/>
 		<property name="sqlSessionTemplateBeanName" value="sqlSession" /> 
 	</bean>
+	
+	<!-- AOP 설정 시작 -->
+	<aop:config>
+		<aop:aspect id="traceAspect" ref="performanceTraceAdvice">
+			<aop:around pointcut="execution(public * myspring.user..*(..))||execution(public * myspring.student..*(..))"
+				method="trace" />
+		</aop:aspect>
+	</aop:config>
+
+	<!-- Advice 클래스를 Bean으로 등록 -->
+	<bean id="performanceTraceAdvice" class="myspring.aop.xml.PerformanceTraceAdvice" />
+	
+	<!-- AOP 설정 끝-->
 	
 </beans>
